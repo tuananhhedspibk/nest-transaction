@@ -1,6 +1,10 @@
 import { Injectable } from '@nestjs/common';
 import { randomUUID } from 'crypto';
+
 import { OrdersRepository } from './orders.repository';
+
+import { ItemsService } from '../items/items.service';
+import { CreateItemDto } from '../items/dto/create-item.dto';
 
 @Injectable()
 export class OrdersService {

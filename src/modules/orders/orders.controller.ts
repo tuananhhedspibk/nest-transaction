@@ -8,12 +8,13 @@ import {
 } from '@nestjs/common';
 import { OrdersService } from './orders.service';
 import { TransactionInterceptor } from '../../common/transaction.interceptor';
+import { CreateItemDto } from '../items/dto/create-item.dto';
 
 @Controller('orders')
 export class OrdersController {
   constructor(private service: OrdersService) {}
 
-  @Get('/index')
+  @Get('')
   async getAll() {
     return this.service.getAll();
   }
